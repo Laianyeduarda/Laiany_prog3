@@ -1,0 +1,163 @@
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Input, Avatar, Button } from 'react-native-elements';
+
+ function login() {
+  return (
+    <View style={styles.container}>
+      <Avatar
+        size='large'
+        rounded
+        source={{
+          uri:
+            'https://i.pinimg.com/736x/8a/d6/ec/8ad6ecc20decf78a0ccce73cca7512df.jpg',
+        }}
+      />
+      <Text style={{color: '#8A2BE2', fontWeight: 'bold',  marginLeft: -300}}>
+        Email
+      </Text>
+      <Input
+        placeholder=''
+        placeholderTextColor="#8A2BE2"
+        leftIcon={{ type: 'font-awesome', name: 'chevron-left', color: '#8A2BE2' }}
+        inputContainerStyle={styles.input}
+      />
+      <Text style={{color: '#8A2BE2', fontWeight: 'bold',  marginLeft: -300}}>
+        Senha
+      </Text>
+      <Input
+        placeholder=''
+        placeholderTextColor="#8A2BE2"
+        leftIcon={
+          <Icon
+            name='user'
+            size={24}
+            color='#8A2BE2'
+          />
+        }
+        inputContainerStyle={styles.input}
+      />
+      <Button
+        title="Login"
+        type="outline"
+        buttonStyle={styles.button}
+        titleStyle={styles.buttonText}
+      />
+      <Text> </Text>
+      <Button
+        title="Cadastro"
+        type="outline"
+        buttonStyle={styles.button}
+        titleStyle={styles.buttonText}
+      />
+      <Button
+        title="Esqueceu Senha?"
+        type="clear"
+        titleStyle={{ color: '#8A2BE2' }}
+      />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+function cadastro() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.textTitle}>CADASTRO</Text>
+      <Text style={{color: '#8A2BE2', fontWeight: 'bold',  marginLeft: -300}}>
+        Nome
+      </Text>
+      <Input
+        placeholder=''
+        placeholderTextColor="#8A2BE2"
+        leftIcon={
+          <Icon
+            name='user'
+            size={24}
+            color='#8A2BE2'
+          />
+        }
+        inputContainerStyle={styles.input}
+      />
+      <Text style={{color: '#8A2BE2', fontWeight: 'bold',  marginLeft: -300}}>
+        Email
+      </Text>
+      <Input
+        placeholder=''
+        placeholderTextColor="#8A2BE2"
+        leftIcon={{ type: 'font-awesome', name: 'chevron-left', color: '#8A2BE2' }}
+        inputContainerStyle={styles.input}
+      />
+      <Text style={{color: '#8A2BE2', fontWeight: 'bold',  marginLeft: -300}}>
+        Senha
+      </Text>
+      <Input
+        placeholder=''
+        placeholderTextColor="#8A2BE2"
+        leftIcon={{ type: 'font-awesome', name: 'chevron-left', color: '#8A2BE2' }}
+        inputContainerStyle={styles.input}
+      />
+      <Button
+        title="Cadastro"
+        type="outline"
+        buttonStyle={styles.button}
+        titleStyle={styles.buttonText}
+      />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+export default function EsqueciSenha() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.textTitle}>Esqueci Senha</Text>
+      <Text style={{color: '#8A2BE2', fontWeight: 'bold',  marginLeft: -300}}>
+        Email
+      </Text>
+      <Input
+        placeholder=''
+        placeholderTextColor="#8A2BE2"
+        leftIcon={{ type: 'font-awesome', name: 'chevron-left', color: '#8A2BE2' }}
+        inputContainerStyle={styles.input}
+      />
+      <Button
+        title="Enviar"
+        type="outline"
+        buttonStyle={styles.button}
+        titleStyle={styles.buttonText}
+      />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textTitle: {
+    color: '#D500F9', 
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  input: {
+    borderBottomColor: '#8A2BE2', 
+  },
+  button: {
+    borderColor: '#D500F9', 
+    backgroundColor: '#D500F9', 
+    width: 200,
+    marginVertical: 5,
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
+});
